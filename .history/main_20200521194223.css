@@ -11,15 +11,9 @@ body{
 }
 
 #main-container{
-    display: flex;
-    flex-flow: column;
     margin: auto;
 }
 
 #session-container{
     display: flex;
-}
-
-.timer-configurator{
-
 }
