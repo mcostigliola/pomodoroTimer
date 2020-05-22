@@ -23,10 +23,4 @@ body{
 .timer-configurator{
     display: flex;
     flex-flow: column;
-
-    width: 50%;
-}
-
-.timer-configurator h3{
-    text-align: center;
 }
