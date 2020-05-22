@@ -30,3 +30,8 @@ body{
 .timer-configurator h3{
     text-align: center;
 }
+
+.cnfg-controller{
+    display: flex;
+    justify-content: space-between;
+}
