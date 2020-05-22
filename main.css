@@ -20,6 +20,20 @@ body{
     display: flex;
 }
 
+#timer-container p{
+    text-align: center;
+}
+
+.btn-container{
+    display: flex;
+    justify-content: space-around;
+}
+
+.cnfg-controller{
+    display: flex;
+    justify-content: space-between;
+}
+
 .timer-configurator{
     display: flex;
     flex-flow: column;
@@ -31,7 +45,7 @@ body{
     text-align: center;
 }
 
-.cnfg-controller{
-    display: flex;
-    justify-content: space-between;
+.timer-container{
+    display:flex;
+    flex-flow: column;
 }
