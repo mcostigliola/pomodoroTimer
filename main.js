@@ -1,5 +1,8 @@
 const MAX_MINUTES = 99;
 let configMinute = 25;
+
+// Add event listener to id=session-up
+document.getElementById('session-up').addEventListener('click', raiseMinutes);
 // let configBreak
 
 // Setto variabili minuti secondi e break
@@ -18,8 +21,9 @@ se il valore e' inferiore o uguale a 99 (costante)
   incremento di uno il valore di session/break
 */
 function raiseMinutes(){
-  if(configMinute <= MAX_MINUTES){
+  if(configMinute < MAX_MINUTES){
     configMinute++;
+    document.getElementById('session-minute').innerText = configMinute.toString();
     console.log(configMinute);
   }
 }
