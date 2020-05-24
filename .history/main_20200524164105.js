@@ -1,6 +1,6 @@
 const MAX_CNFG_VALUE = 99;
-let configSessionMinutes = 30;
-let configBreakMinutes = 98;
+let configSessionMinutes = 25;
+let configBreakMinutes = 5;
 
 // Add event listener to id=session-up
 document.getElementById('session-up').addEventListener('click', raiseSessionMinutes);

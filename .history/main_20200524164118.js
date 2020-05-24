@@ -1,5 +1,5 @@
 const MAX_CNFG_VALUE = 99;
-let configSessionMinutes = 30;
+let configSessionMinutes = 25;
 let configBreakMinutes = 98;
 
 // Add event listener to id=session-up

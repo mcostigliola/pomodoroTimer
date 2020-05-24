@@ -1,12 +1,9 @@
 const MAX_CNFG_VALUE = 99;
-let configSessionMinutes = 30;
-let configBreakMinutes = 98;
+let configSessionMinutes = 25;
 
 // Add event listener to id=session-up
 document.getElementById('session-up').addEventListener('click', raiseSessionMinutes);
 document.getElementById('session-down').addEventListener('click', decreaseSessionMinutes);
-document.getElementById('break-up').addEventListener('click', raiseBreakMinutes);
-document.getElementById('break-down').addEventListener('click', decreaseBreakMinutes);
 // let configBreak
 
 // Setto variabili minuti secondi e break
@@ -52,13 +49,5 @@ function raiseBreakMinutes(){
     configBreakMinutes++;
     document.getElementById('break-minute').innerText = configBreakMinutes.toString();
     console.log(configBreakMinutes);
-  }
-}
-
-function decreaseBreakMinutes(){
-  if(configBreakMinutes > 0){
-    configBreakMinutes--;
-      document.getElementById('break-minute').innerText = configBreakMinutes.toString();
-      console.log(configBreakMinutes);
   }
 }
