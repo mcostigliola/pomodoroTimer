@@ -2,8 +2,8 @@ const MAX_CNFG_VALUE = 99;
 let configSessionMinutes = 25;
 
 // Add event listener to id=session-up
-document.getElementById('session-up').addEventListener('click', raiseSessionMinutes);
-document.getElementById('session-down').addEventListener('click', decreaseSessionMinutes);
+document.getElementById('session-up').addEventListener('click', raiseMinutes);
+document.getElementById('session-down').addEventListener('click', decreaseMinutes);
 // let configBreak
 
 // Setto variabili minuti secondi e break
@@ -21,7 +21,7 @@ document.getElementById('session-down').addEventListener('click', decreaseSessio
 se il valore e' inferiore o uguale a 99 (costante)
   incremento di uno il valore di session/break
 */
-function raiseSessionMinutes(){
+function raiseMinutes(){
   if(configSessionMinutes < MAX_CNFG_VALUE){
     configSessionMinutes++;
     document.getElementById('session-minute').innerText = configSessionMinutes.toString();
@@ -36,7 +36,7 @@ se il valore e' superiore a 0
 
 */
 
-function decreaseSessionMinutes(){
+function decreaseMinutes(){
     if(configSessionMinutes > 0){
       configSessionMinutes--;
         document.getElementById('session-minute').innerText = configSessionMinutes.toString();
@@ -44,7 +44,7 @@ function decreaseSessionMinutes(){
     }
 }
 
-function raise(){
+function raiseMinutes(){
   if(configMinute < MAX_CNFG_VALUE){
     configMinute++;
     document.getElementById('session-minute').innerText = configMinute.toString();
