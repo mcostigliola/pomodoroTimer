@@ -1,4 +1,4 @@
-const MAX_MINUTES = 99;
+const MAX_MINUTES = 99
 let configMinute = 25;
 // let configBreak
 
@@ -19,8 +19,7 @@ se il valore e' inferiore o uguale a 99 (costante)
 */
 function raiseMinutes(){
   if(configMinute <= MAX_MINUTES){
-    configMinute++;
-    console.log(configMinute);
+    configMinute++
   }
 }
 

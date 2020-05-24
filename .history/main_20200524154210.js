@@ -1,4 +1,4 @@
-const MAX_MINUTES = 99;
+
 let configMinute = 25;
 // let configBreak
 
@@ -18,10 +18,7 @@ se il valore e' inferiore o uguale a 99 (costante)
   incremento di uno il valore di session/break
 */
 function raiseMinutes(){
-  if(configMinute <= MAX_MINUTES){
-    configMinute++;
-    console.log(configMinute);
-  }
+
 }
 
 //TASTO DOWN
