@@ -3,6 +3,7 @@ let configMinute = 25;
 
 // Add event listener to id=session-up
 document.getElementById('session-up').addEventListener('click', raiseMinutes);
+document.getElementById('session-down').addEventListener('click', decreaseMinutes);
 // let configBreak
 
 // Setto variabili minuti secondi e break
@@ -34,3 +35,11 @@ se il valore e' superiore a 0
    decremento di uno il valore di session/break
 
 */
+
+function decreaseMinutes(){
+    if(configMinute > 0){
+        configMinute--;
+        document.getElementById('session-minute').innerText = configMinute.toString();
+        console.log(configMinute);
+    }
+}
