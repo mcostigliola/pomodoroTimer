@@ -1,0 +1,5 @@
+NEXT SESSION:
+pseudo code di tutto
+
+TODO FUTURI:
+-unire funzioni delle arrow
