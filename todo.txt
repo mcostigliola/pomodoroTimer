@@ -60,6 +60,7 @@ altrimenti
   mostro ` e' tempo di una sessione`
   modifico variabile minuti a configSessionMinutes
 
+isOnBreak = !isOnBreak
 aggiorno i minuti display a variabile minuti
 
 #pause
@@ -67,4 +68,10 @@ se isPaused
   esco
 setto isPaused a true
 
-#
+#reset
+aggiorno minuti a valore di configSessionMinutes
+aggiorno secondi al valore 00
+aggiorno session al valore configSessionMinutes
+aggiorno break configurator ai valori configBreakMinutes
+setto isPaused = true
+setto isOnBreak = false
