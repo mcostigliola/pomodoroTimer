@@ -24,6 +24,7 @@ in caso contrario:
     incremento anche la variabile dei minuti del timer centrale
 
 #Tasto play
+
 se isPaused e' falso
     esco;
 Parto col countdown
@@ -62,9 +63,4 @@ altrimenti
 
 aggiorno i minuti display a variabile minuti
 
-#pause
-se isPaused
-  esco
-setto isPaused a true
 
-#
