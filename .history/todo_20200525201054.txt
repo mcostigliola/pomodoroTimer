@@ -41,8 +41,9 @@ finchè isPaused e' falso:
     altrimenti
       se i minuti sono > 0
         decremento la variabile dei  minuti
+        aggiorno i minuti in display
         setto la variabile dei secondi a 59
-        chiama updateDisplay
+        aggiorno i secondi in display
       altrimenti
         isPaused = true
         chiama endTimer
@@ -61,6 +62,7 @@ altrimenti
 
 #endTimer
 modifico variabile secondi a 0
+aggiorno secondi in display
 
 se isOnBreak e' false
   mostro ` e' tempo di un break`
@@ -70,7 +72,7 @@ altrimenti
   modifico variabile minuti a configSessionMinutes
 
 isOnBreak = !isOnBreak
-chiama updateDisplay
+aggiorno i minuti display a variabile minuti
 
 #pause
 se isPaused
@@ -79,10 +81,8 @@ setto isPaused a true
 
 #reset
 aggiorno minuti a valore di configSessionMinutes
-aggiorno secondi a 0
-chiama updateDisplay
+aggiorno secondi al valore 00
 aggiorno session al valore configSessionMinutes
 aggiorno break configurator ai valori configBreakMinutes
 setto isPaused = true
 setto isOnBreak = false
-
