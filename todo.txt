@@ -3,3 +3,38 @@ pseudo code di tutto
 
 TODO FUTURI:
 -unire funzioni delle arrow
+
+
+
+
+
+
+
+
+
+
+PSEUDOCODICE
+setto variabile isPaused
+
+#Tasti up e down
+Se il timer/break è partito e clicco up o down:
+    incremento variabile del session-minute/break:
+in caso contrario:
+    incremento anche la variabile dei minuti del timer centrale
+
+#Tasto play
+verifico il valore della variabile isStarted;
+se la variabile è = true:
+    esco;
+Parto col countdown
+Setto valore della isStarted = true
+
+
+#countdown
+leggo il valore della variabile dei minuti della sessione;
+leggo il valore della variabile dei secondi della sessione;
+
+
+finchè isPaused:
+    se i secondi > 0:
+        secondi
