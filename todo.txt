@@ -78,11 +78,15 @@ se isPaused
 setto isPaused a true
 
 #reset
+aggiorno session al valore configSessionMinutes
+aggiorno break configurator ai valori configBreakMinutes
+invoco stop
+
+#stop
 aggiorno minuti a valore di configSessionMinutes
 aggiorno secondi a 0
 chiama updateDisplay
-aggiorno session al valore configSessionMinutes
-aggiorno break configurator ai valori configBreakMinutes
 setto isPaused = true
 setto isOnBreak = false
+
 
