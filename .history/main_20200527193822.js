@@ -59,7 +59,6 @@ function countdown(){
 }
 
 function decreaseSeconds(){
-  console.log("deacreseSeconds is active")
   if (timerSeconds > 0){
     timerSeconds--;
     updateDisplay();
