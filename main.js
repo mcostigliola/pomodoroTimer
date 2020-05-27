@@ -1,6 +1,8 @@
 const MAX_CNFG_VALUE = 99;
 let configSessionMinutes = 25;
 let configBreakMinutes = 5;
+let timerMinutes = 0;
+let timerSeconds = 0;
 
 document.getElementById('session-minute').innerText = configSessionMinutes.toString();
 document.getElementById('break-minute').innerText = configBreakMinutes.toString();
@@ -40,4 +42,12 @@ function decreaseBreakMinutes(){
       document.getElementById('break-minute').innerText = configBreakMinutes.toString();
       console.log(configBreakMinutes);
   }
+}
+
+function updateDisplay(){
+  let timer = '';
+  timerMinutes < 10 ? timer = `0${timerMinutes}`: timer = timerMinutes;
+  timerSeconds < 10 ? timer += `:0${timerSeconds}`: timer += `:${timerSeconds}`;
+  return timer;
+
 }
