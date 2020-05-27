@@ -48,6 +48,5 @@ function updateDisplay(){
   let timer = '';
   timerMinutes < 10 ? timer = `0${timerMinutes}`: timer = timerMinutes;
   timerSeconds < 10 ? timer += `:0${timerSeconds}`: timer += `:${timerSeconds}`;
-  return timer;
-
+  document.getElementById('timer').innerText = timer;
 }
