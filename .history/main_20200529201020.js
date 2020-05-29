@@ -4,7 +4,7 @@ let configBreakMinutes = 5;
 let timerMinutes = configSessionMinutes;
 let timerSeconds = 0;
 let interval;
-let isPaused = true;
+let isPaused = false;
 
 document.getElementById('session-minute').innerText = configSessionMinutes.toString();
 document.getElementById('break-minute').innerText = configBreakMinutes.toString();
@@ -13,7 +13,7 @@ document.getElementById('session-up').addEventListener('click', raiseSessionMinu
 document.getElementById('session-down').addEventListener('click', decreaseSessionMinutes);
 document.getElementById('break-up').addEventListener('click', raiseBreakMinutes);
 document.getElementById('break-down').addEventListener('click', decreaseBreakMinutes);
-document.getElementById('btn-play').addEventListener('click', pressPlay);
+document.getElementById('btn-play').addEventListener('click', countdown);
 
 function raiseSessionMinutes(){
   if(configSessionMinutes < MAX_CNFG_VALUE){

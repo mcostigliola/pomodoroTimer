@@ -4,7 +4,7 @@ let configBreakMinutes = 5;
 let timerMinutes = configSessionMinutes;
 let timerSeconds = 0;
 let interval;
-let isPaused = true;
+let isPaused = false;
 
 document.getElementById('session-minute').innerText = configSessionMinutes.toString();
 document.getElementById('break-minute').innerText = configBreakMinutes.toString();
