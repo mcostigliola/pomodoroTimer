@@ -99,7 +99,5 @@ function pressStop(){
 function resetButton(){
   configSessionMinutes = DEFMINUTES;
   configBreakMinutes = DEFBREAK;
-  document.getElementById('session-minute').innerText = configSessionMinutes.toString();
-  document.getElementById('break-minute').innerText = configBreakMinutes.toString();
   pressStop();
 }
