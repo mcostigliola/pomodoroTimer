@@ -13,7 +13,7 @@ document.getElementById('session-up').addEventListener('click', raiseSessionMinu
 document.getElementById('session-down').addEventListener('click', decreaseSessionMinutes);
 document.getElementById('break-up').addEventListener('click', raiseBreakMinutes);
 document.getElementById('break-down').addEventListener('click', decreaseBreakMinutes);
-document.getElementById('btn-play').addEventListener('click', countdown);
+document.getElementById('play').addEventListener('click', countdown);
 
 function raiseSessionMinutes(){
   if(configSessionMinutes < MAX_CNFG_VALUE){

@@ -2,8 +2,8 @@ const MAX_CNFG_VALUE = 99;
 let configSessionMinutes = 25;
 let configBreakMinutes = 5;
 let timerMinutes = configSessionMinutes;
-let timerSeconds = 0;
-let interval;
+let timerSeconds = 3;
+let interval = 0;
 let isPaused = false;
 
 document.getElementById('session-minute').innerText = configSessionMinutes.toString();
@@ -13,7 +13,6 @@ document.getElementById('session-up').addEventListener('click', raiseSessionMinu
 document.getElementById('session-down').addEventListener('click', decreaseSessionMinutes);
 document.getElementById('break-up').addEventListener('click', raiseBreakMinutes);
 document.getElementById('break-down').addEventListener('click', decreaseBreakMinutes);
-document.getElementById('btn-play').addEventListener('click', countdown);
 
 function raiseSessionMinutes(){
   if(configSessionMinutes < MAX_CNFG_VALUE){
@@ -68,5 +67,24 @@ function countdown(){
         isPaused = true;
       }
     }
-   }, 1000);
+   }), 1000);
+}
+
+function decreaseSeconds(){
+  if(isPaused === true){
+    clearInterval(interval);
+    return;
+  }
+  if (timerSeconds > 0){
+        timerSeconds--;
+        updateDisplay();
+  }else{
+    if (timerMinutes > 0){
+      timerMinutes--;
+      timerSeconds = 59;
+      updateDisplay();
+    } else {
+      isPaused = true;
+    }
+  }
 }
