@@ -14,7 +14,6 @@ document.getElementById('session-down').addEventListener('click', decreaseSessio
 document.getElementById('break-up').addEventListener('click', raiseBreakMinutes);
 document.getElementById('break-down').addEventListener('click', decreaseBreakMinutes);
 document.getElementById('btn-play').addEventListener('click', pressPlay);
-document.getElementById('btn-pause').addEventListener('click', pressPause);
 
 function raiseSessionMinutes(){
   if(configSessionMinutes < MAX_CNFG_VALUE){
