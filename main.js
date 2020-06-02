@@ -26,27 +26,43 @@ function raiseSessionMinutes(){
   if(configSessionMinutes < MAX_CNFG_VALUE){
     configSessionMinutes++;
     document.getElementById('session-minute').innerText = configSessionMinutes.toString();
+    if(isPaused){
+      timerMinutes = configSessionMinutes;
+      updateDisplay();
+    }
   }
 }
 
 function decreaseSessionMinutes(){
-    if(configSessionMinutes > 0){
-      configSessionMinutes--;
-        document.getElementById('session-minute').innerText = configSessionMinutes.toString();
+  if(configSessionMinutes > 0){
+    configSessionMinutes--;
+    document.getElementById('session-minute').innerText = configSessionMinutes.toString();
+    if(isPaused){
+      timerMinutes = configSessionMinutes;
+      updateDisplay();
     }
+  }
 }
 
 function raiseBreakMinutes(){
   if(configBreakMinutes < MAX_CNFG_VALUE){
     configBreakMinutes++;
     document.getElementById('break-minute').innerText = configBreakMinutes.toString();
+    if(isPaused){
+      timerMinutes = configBreakMinutes;
+      updateDisplay();
+    }
   }
 }
 
 function decreaseBreakMinutes(){
   if(configBreakMinutes > 0){
     configBreakMinutes--;
-      document.getElementById('break-minute').innerText = configBreakMinutes.toString();
+    document.getElementById('break-minute').innerText = configBreakMinutes.toString();
+    if(isPaused){
+      timerMinutes = configBreakMinutes;
+      updateDisplay();
+    }
   }
 }
 
