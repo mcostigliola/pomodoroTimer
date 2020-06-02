@@ -22,11 +22,13 @@ document.getElementById('btn-reset').addEventListener('click', resetButton);
 
 function pressArrow(e){
   const buttonId = e.target.id;
-  changeConfigMinutes(buttonId);
-  alignConfigWithDisplay(buttonId);
+
+  changeConfigMinutes();
+  alignConfigWithDisplay();
+
 }
 
-function alignConfigWithDisplay(buttonId){
+function alignConfigWithDisplay(){
   if(buttonId.includes('break')){
     document.getElementById('break-minute').innerText = configBreakMinutes.toString();
     if(isPaused && isOnBreak){
@@ -42,7 +44,7 @@ function alignConfigWithDisplay(buttonId){
   }
 }
 
-function changeConfigMinutes(buttonId){
+function changeConfigMinutes(){
   switch(buttonId){
     case "session-up":
       if(configSessionMinutes < MAX_CNFG_VALUE) configSessionMinutes++;

@@ -22,27 +22,6 @@ document.getElementById('btn-reset').addEventListener('click', resetButton);
 
 function pressArrow(e){
   const buttonId = e.target.id;
-  changeConfigMinutes(buttonId);
-  alignConfigWithDisplay(buttonId);
-}
-
-function alignConfigWithDisplay(buttonId){
-  if(buttonId.includes('break')){
-    document.getElementById('break-minute').innerText = configBreakMinutes.toString();
-    if(isPaused && isOnBreak){
-      timerMinutes = configBreakMinutes;
-      updateDisplay();
-    }
-  }else{
-    document.getElementById('session-minute').innerText = configSessionMinutes.toString();
-    if(isPaused && !isOnBreak){
-      timerMinutes = configSessionMinutes;
-      updateDisplay();
-    }
-  }
-}
-
-function changeConfigMinutes(buttonId){
   switch(buttonId){
     case "session-up":
       if(configSessionMinutes < MAX_CNFG_VALUE) configSessionMinutes++;
@@ -56,6 +35,20 @@ function changeConfigMinutes(buttonId){
     case "break-down":
       if(configBreakMinutes > 0) configBreakMinutes--;
       break;
+  }
+
+  if(buttonId.includes('break')){
+    document.getElementById('break-minute').innerText = configBreakMinutes.toString();
+    if(isPaused && isOnBreak){
+      timerMinutes = configBreakMinutes;
+      updateDisplay();
+    }
+  }else{
+    document.getElementById('session-minute').innerText = configSessionMinutes.toString();
+    if(isPaused && !isOnBreak){
+      timerMinutes = configSessionMinutes;
+      updateDisplay();
+    }
   }
 }
 
