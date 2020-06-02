@@ -3,15 +3,9 @@ pseudo code di tutto
 
 TODO FUTURI:
 -unire funzioni delle arrow
-
-
-
-
-
-
-
-
-
+-creare funzione updateConfig per allineare interfaccia a variabili
+-inserire timer nel titolo della page per renderlo visibile dal tab
+-aggiungere suono a fine timer
 
 PSEUDOCODICE
 setto variabile isPaused = true
@@ -86,3 +80,32 @@ aggiorno break configurator ai valori configBreakMinutes
 setto isPaused = true
 setto isOnBreak = false
 
+#switchStatus
+isOnBreak = !isOnBreak
+se isOnBreak e' falso
+  assegno a timerMinutes configSessionMinutes
+  cambiare status a "Session"
+altrimenti
+  assegno a timerMinutes configBreakMinutes
+  cambiare status a "Break"
+aggiorno il display
+
+#pressArrowBtn
+switch sul id del bottone
+  se upSession
+    incremento configSessionMinutes
+  se downSession
+    decremento configSessionMinutes
+  se upBreak
+    incremento configBreakMinutes
+  se downBreak
+    decremento configBreakMinutes
+
+se id contiene parola "break"
+  assegno a timerMinutes configBreakMinutes
+  aggiorno il testo di break
+altrimenti
+  assegno a timerMinutes configSessionMinutes
+  aggiorno il testo di session
+
+aggiorno il display
