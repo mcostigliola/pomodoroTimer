@@ -111,6 +111,8 @@ function pressPause(){
 
 function pressStop(){
   timerSeconds = 0;
+  timerMinutes = configSessionMinutes;
+  updateDisplay();
   isPaused = true;
   if(isOnBreak){
     sessionP.innerText = "Break";
@@ -119,7 +121,6 @@ function pressStop(){
     sessionP.innerText = "Session";
     timerMinutes = configSessionMinutes;
   }
-  updateDisplay();
 }
 
 function resetButton(){

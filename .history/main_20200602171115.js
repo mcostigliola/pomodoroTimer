@@ -8,7 +8,7 @@ let timerSeconds = 0;
 let interval;
 let isPaused = true;
 let isOnBreak = false;
-let sessionP = document.getElementById('status');
+
 document.getElementById('session-minute').innerText = configSessionMinutes.toString();
 document.getElementById('break-minute').innerText = configBreakMinutes.toString();
 
@@ -111,15 +111,11 @@ function pressPause(){
 
 function pressStop(){
   timerSeconds = 0;
-  isPaused = true;
-  if(isOnBreak){
-    sessionP.innerText = "Break";
-    timerMinutes = configBreakMinutes;
-  }else{
-    sessionP.innerText = "Session";
-    timerMinutes = configSessionMinutes;
-  }
+  timerMinutes = configSessionMinutes;
   updateDisplay();
+  isPaused = true;
+  if(isOnBreak) sessionP.innerText = "Break";
+  else sessionP.innerText = "Session";
 }
 
 function resetButton(){
@@ -131,6 +127,7 @@ function resetButton(){
 
 function switchStauts(){
   isOnBreak = !isOnBreak;
+  let sessionP = document.getElementById('status');
   if(isOnBreak){
     timerMinutes = configBreakMinutes;
     sessionP.innerText = "Break";
