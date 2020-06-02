@@ -17,17 +17,10 @@ document.getElementById('session-down').addEventListener('click', decreaseSessio
 document.getElementById('break-up').addEventListener('click', raiseBreakMinutes);
 document.getElementById('break-down').addEventListener('click', decreaseBreakMinutes);
 */
-let arrowBtns = Array.from(document.querySelectorAll('.arrow-btn'));
-arrowBtns.forEach(btn => btn.addEventListener('click', pressArrow));
-
 document.getElementById('btn-play').addEventListener('click', pressPlay);
 document.getElementById('btn-pause').addEventListener('click', pressPause);
 document.getElementById('btn-stop').addEventListener('click', pressStop);
 document.getElementById('btn-reset').addEventListener('click', resetButton);
-
-function pressArrow(){
-
-}
 
 /*
 function raiseSessionMinutes(){

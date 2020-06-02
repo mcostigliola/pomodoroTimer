@@ -26,7 +26,7 @@ document.getElementById('btn-stop').addEventListener('click', pressStop);
 document.getElementById('btn-reset').addEventListener('click', resetButton);
 
 function pressArrow(){
-
+console.log("ciao");
 }
 
 /*
