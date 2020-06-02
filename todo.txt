@@ -102,10 +102,15 @@ switch sul id del bottone
     decremento configBreakMinutes
 
 se id contiene parola "break"
-  assegno a timerMinutes configBreakMinutes
-  aggiorno il testo di break
+  se sono isOnBreak = true:
+    aggiorno display
+    assegno a timerMinutes configBreakMinutes
+    aggiorno il configuratore di break
+  
 altrimenti
   assegno a timerMinutes configSessionMinutes
   aggiorno il testo di session
 
 aggiorno il display
+
+

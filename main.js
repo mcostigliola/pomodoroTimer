@@ -25,8 +25,35 @@ document.getElementById('btn-pause').addEventListener('click', pressPause);
 document.getElementById('btn-stop').addEventListener('click', pressStop);
 document.getElementById('btn-reset').addEventListener('click', resetButton);
 
-function pressArrow(){
+function pressArrow(e){
+  const buttonId = e.target.id;
+  switch(buttonId){
+    case "session-up":
+      if(configSessionMinutes < MAX_CNFG_VALUE) configSessionMinutes++;
+      break;
+    case "session-down":
+      if(configSessionMinutes > 0) configSessionMinutes--;
+      break;
+    case "break-up":
+      if(configBreakMinutes < MAX_CNFG_VALUE) configBreakMinutes++;
+      break;
+    case "break-down":
+      if(configBreakMinutes > 0) configBreakMinutes--;
+      break;
+  }
 
+  if(buttonId.includes('break')){
+    timerMinutes = configBreakMinutes;
+    document.getElementById('break-minute').innerText = configBreakMinutes.toString();
+  }else{
+    timerMinutes = configSessionMinutes;
+    document.getElementById('session-minute').innerText = configSessionMinutes.toString();
+  }
+
+  if(isPaused){
+    updateDisplay()
+  }
+  
 }
 
 /*
