@@ -49,12 +49,14 @@ function pressArrow(e){
       updateDisplay();
     }
   }else{
+    timerMinutes = configSessionMinutes;
     document.getElementById('session-minute').innerText = configSessionMinutes.toString();
-    if(isPaused && !isOnBreak){
-      timerMinutes = configSessionMinutes;
-      updateDisplay();
-    }
   }
+
+  if(isPaused){
+    updateDisplay()
+  }
+
 }
 
 /*

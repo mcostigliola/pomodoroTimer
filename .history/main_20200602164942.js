@@ -55,6 +55,11 @@ function pressArrow(e){
       updateDisplay();
     }
   }
+
+  if(isPaused){
+    updateDisplay()
+  }
+
 }
 
 /*
