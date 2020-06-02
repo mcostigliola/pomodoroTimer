@@ -4,7 +4,6 @@ pseudo code di tutto
 TODO FUTURI:
 -inserire timer nel titolo della page per renderlo visibile dal tab
 -aggiungere suono a fine timer
--stop deve cambiare scritta status a Session
 
 PSEUDOCODICE
 setto variabile isPaused = true
