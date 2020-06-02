@@ -21,6 +21,7 @@ document.getElementById('btn-pause').addEventListener('click', pressPause);
 document.getElementById('btn-stop').addEventListener('click', pressStop);
 document.getElementById('btn-reset').addEventListener('click', resetButton);
 
+
 function raiseSessionMinutes(){
   if(configSessionMinutes < MAX_CNFG_VALUE){
     configSessionMinutes++;
@@ -72,6 +73,7 @@ function countdown(){
         updateDisplay();
       } else {
         isPaused = true;
+        switchStauts();
       }
     }
    }, 1000);
@@ -102,4 +104,17 @@ function resetButton(){
   document.getElementById('session-minute').innerText = configSessionMinutes.toString();
   document.getElementById('break-minute').innerText = configBreakMinutes.toString();
   pressStop();
+}
+
+function switchStauts(){
+  isOnBreak = !isOnBreak;
+  let sessionP = document.getElementById('status');
+  if(isOnBreak){
+    timerMinutes = configBreakMinutes;
+    sessionP.innerText = "Break";
+  } else {
+    timerMinutes = configSessionMinutes;
+    sessionP.innerText = "Session";
+  }
+  updateDisplay();
 }

@@ -1,10 +1,13 @@
 const MAX_CNFG_VALUE = 99;
-let configSessionMinutes = 25;
-let configBreakMinutes = 5;
+const DEFMINUTES = 25;
+const DEFBREAK = 5;
+let configSessionMinutes = DEFMINUTES;
+let configBreakMinutes = DEFBREAK;
 let timerMinutes = configSessionMinutes;
 let timerSeconds = 0;
 let interval;
-let isPaused = false;
+let isPaused = true;
+let isOnBreak = false;
 
 document.getElementById('session-minute').innerText = configSessionMinutes.toString();
 document.getElementById('break-minute').innerText = configBreakMinutes.toString();
@@ -13,6 +16,11 @@ document.getElementById('session-up').addEventListener('click', raiseSessionMinu
 document.getElementById('session-down').addEventListener('click', decreaseSessionMinutes);
 document.getElementById('break-up').addEventListener('click', raiseBreakMinutes);
 document.getElementById('break-down').addEventListener('click', decreaseBreakMinutes);
+document.getElementById('btn-play').addEventListener('click', pressPlay);
+document.getElementById('btn-pause').addEventListener('click', pressPause);
+document.getElementById('btn-stop').addEventListener('click', pressStop);
+document.getElementById('btn-reset').addEventListener('click', resetButton);
+
 
 function raiseSessionMinutes(){
   if(configSessionMinutes < MAX_CNFG_VALUE){
@@ -65,26 +73,48 @@ function countdown(){
         updateDisplay();
       } else {
         isPaused = true;
+        switchStauts();
       }
     }
    }, 1000);
 }
 
-function decreaseSeconds(){
-  if(isPaused === true){
-    clearInterval(interval);
-    return;
+function pressPlay(){
+  if (isPaused){
+    countdown();
+    isPaused = false;
   }
-  if (timerSeconds > 0){
-        timerSeconds--;
-        updateDisplay();
-  }else{
-    if (timerMinutes > 0){
-      timerMinutes--;
-      timerSeconds = 59;
-      updateDisplay();
-    } else {
-      isPaused = true;
-    }
+}
+
+function pressPause(){
+  if(!isPaused) isPaused = true;
+}
+
+function pressStop(){
+  timerSeconds = 0;
+  timerMinutes = configSessionMinutes;
+  updateDisplay();
+  isPaused = true;
+  isOnBreak = false;
+}
+
+function resetButton(){
+  configSessionMinutes = DEFMINUTES;
+  configBreakMinutes = DEFBREAK;
+  document.getElementById('session-minute').innerText = configSessionMinutes.toString();
+  document.getElementById('break-minute').innerText = configBreakMinutes.toString();
+  pressStop();
+}
+
+function switchStauts(){
+  isOnBreak = !isOnBreak;
+  let sessionP = document.getElementById('session');
+  if(isOnBreak){
+    timerMinutes = configBreakMinutes;
+    sessionP.innerText = "Break";
+  } else {
+    timerMinutes = configSessionMinutes;
+    sessionP.innerText = "Session";
   }
+  updateDisplay();
 }
