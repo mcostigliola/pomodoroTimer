@@ -125,16 +125,11 @@ function pressStop(){
 function resetButton(){
   configSessionMinutes = DEFMINUTES;
   configBreakMinutes = DEFBREAK;
-  isPaused = true;
-  isOnBreak = false;
-  timerMinutes = configSessionMinutes;
-  timerSeconds = 0;
-  sessionP.innerText = "Session";
   updateDisplay();
+  pressStop();
 }
 
 function switchStatus(){
-  clearInterval(intervalId);
   isOnBreak = !isOnBreak;
   if(isOnBreak){
     timerMinutes = configBreakMinutes;
@@ -143,6 +138,5 @@ function switchStatus(){
     timerMinutes = configSessionMinutes;
     sessionP.innerText = "Session";
   }
-  isPaused = true;
   updateDisplay();
 }
