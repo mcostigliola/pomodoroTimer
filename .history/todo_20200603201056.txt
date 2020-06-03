@@ -4,7 +4,7 @@ pseudo code di tutto
 TODO FUTURI:
 -inserire timer nel titolo della page per renderlo visibile dal tab
 -aggiungere suono a fine timer
--aggiungere long break ogni 4 pomodoro
+-aggiungere lonk break ogni 4 pomodoro
 
 PSEUDOCODICE
 setto variabile isPaused = true
