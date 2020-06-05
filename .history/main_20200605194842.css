@@ -15,10 +15,6 @@ body{
     height: 100%;
 }
 
-button{
-
-}
-
 #main-container{
     display: flex;
     flex-flow: column;
@@ -34,7 +30,7 @@ button{
 }
 
 #timer-container{
-    height: 75%;
+    height: 50%;
 }
 
 #timer-container p{
@@ -63,10 +59,6 @@ button{
 .cnfg-controller{
     display: flex;
     justify-content: space-between;
-}
-
-.cnfg-name{
-    font-size: 30px;
 }
 
 

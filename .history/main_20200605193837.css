@@ -15,10 +15,6 @@ body{
     height: 100%;
 }
 
-button{
-
-}
-
 #main-container{
     display: flex;
     flex-flow: column;
@@ -31,10 +27,6 @@ button{
 #session-container{
     display: flex;
     height: 30%;
-}
-
-#timer-container{
-    height: 75%;
 }
 
 #timer-container p{
@@ -65,10 +57,6 @@ button{
     justify-content: space-between;
 }
 
-.cnfg-name{
-    font-size: 30px;
-}
-
 
 .timer-configurator{
     display: flex;
@@ -78,4 +66,8 @@ button{
 
 .timer-configurator h3{
     text-align: center;
+}
+
+#timer-container{
+
 }

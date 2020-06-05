@@ -1,5 +1,5 @@
 *{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     box-sizing: border-box;
     margin:0;
     padding:0;
@@ -13,10 +13,6 @@ body{
     display: flex;
     flex-flow: column;
     height: 100%;
-}
-
-button{
-
 }
 
 #main-container{
@@ -33,13 +29,10 @@ button{
     height: 30%;
 }
 
-#timer-container{
-    height: 75%;
-}
-
 #timer-container p{
     display:flex;
     flex-flow: column;
+    height: 50%;
     text-align: center;
 }
 
@@ -63,10 +56,6 @@ button{
 .cnfg-controller{
     display: flex;
     justify-content: space-between;
-}
-
-.cnfg-name{
-    font-size: 30px;
 }
 
 

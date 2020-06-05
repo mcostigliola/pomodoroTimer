@@ -15,10 +15,6 @@ body{
     height: 100%;
 }
 
-button{
-
-}
-
 #main-container{
     display: flex;
     flex-flow: column;

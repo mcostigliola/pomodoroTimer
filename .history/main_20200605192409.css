@@ -15,15 +15,11 @@ body{
     height: 100%;
 }
 
-button{
-
-}
-
 #main-container{
     display: flex;
     flex-flow: column;
-    height: 50vh;
-    justify-content: space-between;
+    height: 70vh;
+    justify-content: space-around;
     margin: auto;
     width: 40%;
 }
@@ -33,26 +29,13 @@ button{
     height: 30%;
 }
 
-#timer-container{
-    height: 75%;
-}
-
 #timer-container p{
-    display:flex;
-    flex-flow: column;
     text-align: center;
 }
 
 #title-watch{
-    align-items: center;
-    display: flex;
     height: 15%;
     text-align: center;
-}
-
-#title-watch p{
-    flex-grow: 1;
-    font-size: 40px;
 }
 
 .btn-container{
@@ -65,10 +48,6 @@ button{
     justify-content: space-between;
 }
 
-.cnfg-name{
-    font-size: 30px;
-}
-
 
 .timer-configurator{
     display: flex;
@@ -78,4 +57,9 @@ button{
 
 .timer-configurator h3{
     text-align: center;
+}
+
+.timer-container{
+    display:flex;
+    flex-flow: column;
 }
