@@ -5,22 +5,35 @@
     padding:0;
 }
 
+/* html{
+    height: 100%;
+} */
+
 body{
     display: flex;
     flex-flow: column;
+    height: 100%;
 }
 
 #main-container{
     display: flex;
     flex-flow: column;
+    height: 70vh;
+    justify-content: space-around;
     margin: auto;
+    width: 40%;
 }
 
 #session-container{
     display: flex;
+    height: 30%;
 }
 
 #timer-container p{
+    text-align: center;
+}
+
+#title-watch{
     text-align: center;
 }
 
