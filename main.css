@@ -1,3 +1,9 @@
+:root{
+    --bg-color: #798897;
+    --main-color: #f3eed9;
+    --icon-color: #d15c84;
+}
+
 *{
     border: 1px solid black;
     box-sizing: border-box;
@@ -7,6 +13,7 @@
 
 html{
     height: 100%;
+    background-color: var(--bg-color);
 }
 
 body{
@@ -15,11 +22,13 @@ body{
     height: 100%;
 }
 
-button{
-
+i{
+    color: var(--icon-color);
 }
 
 #main-container{
+    background-color: var(--main-color);
+    box-shadow:5px 5px 10px 5px var(--icon-color);
     display: flex;
     flex-flow: column;
     height: 250px;
@@ -60,6 +69,7 @@ button{
 }
 
 #title-watch p{
+    color: var(--icon-color);
     flex-grow: 1;
     font-size: 30px;
     font-weight: bold;
