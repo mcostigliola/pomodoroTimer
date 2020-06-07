@@ -12,7 +12,7 @@ let sessionP = document.getElementById('status');
 document.getElementById('session-minute').innerText = configSessionMinutes.toString();
 document.getElementById('break-minute').innerText = configBreakMinutes.toString();
 
-let arrowBtns = Array.from(document.querySelectorAll('.fa'));
+let arrowBtns = Array.from(document.querySelectorAll('.arrow-btn'));
 arrowBtns.forEach(btn => btn.addEventListener('click', pressArrow));
 
 document.getElementById('btn-play').addEventListener('click', pressPlay);

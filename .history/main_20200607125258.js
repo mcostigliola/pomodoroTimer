@@ -12,7 +12,7 @@ let sessionP = document.getElementById('status');
 document.getElementById('session-minute').innerText = configSessionMinutes.toString();
 document.getElementById('break-minute').innerText = configBreakMinutes.toString();
 
-let arrowBtns = Array.from(document.querySelectorAll('.arrow-btn'));
+let arrowBtns = Array.from(document.querySelectorAll('i'));
 arrowBtns.forEach(btn => btn.addEventListener('click', pressArrow));
 
 document.getElementById('btn-play').addEventListener('click', pressPlay);
@@ -21,7 +21,7 @@ document.getElementById('btn-stop').addEventListener('click', pressStop);
 document.getElementById('btn-reset').addEventListener('click', resetButton);
 
 function pressArrow(e){
-  const buttonId = e.target.id;
+  const buttonId = e.target.parentNode.id;
   changeConfigMinutes(buttonId);
   alignConfigWithDisplay(buttonId);
 }
@@ -125,11 +125,16 @@ function pressStop(){
 function resetButton(){
   configSessionMinutes = DEFMINUTES;
   configBreakMinutes = DEFBREAK;
+  isPaused = true;
+  isOnBreak = false;
+  timerMinutes = configSessionMinutes;
+  timerSeconds = 0;
+  sessionP.innerText = "Session";
   updateDisplay();
-  pressStop();
 }
 
 function switchStatus(){
+  clearInterval(intervalId);
   isOnBreak = !isOnBreak;
   if(isOnBreak){
     timerMinutes = configBreakMinutes;
@@ -138,5 +143,6 @@ function switchStatus(){
     timerMinutes = configSessionMinutes;
     sessionP.innerText = "Session";
   }
+  isPaused = true;
   updateDisplay();
 }
