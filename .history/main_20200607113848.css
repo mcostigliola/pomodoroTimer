@@ -22,10 +22,10 @@ button{
 #main-container{
     display: flex;
     flex-flow: column;
-    height: 250px;
+    height: 50vh;
     justify-content: space-between;
     margin: auto;
-    width: 250px;
+    width: 40%;
 }
 
 #session-container{
@@ -45,10 +45,9 @@ button{
     height: 75%;
 }
 
-#timer-container{
+#timer-container p{
     display:flex;
     flex-flow: column;
-    justify-content: space-between  ;
     text-align: center;
 }
 
@@ -61,7 +60,7 @@ button{
 
 #title-watch p{
     flex-grow: 1;
-    font-size: 30px;
+    font-size: 40px;
     font-weight: bold;
 }
 
@@ -75,8 +74,7 @@ button{
 }
 
 .btn-container button{
-    height: 25px;
-    width: 35px;
+    width: 15%;
 }
 
 .cnfg-controller{
@@ -86,7 +84,7 @@ button{
 }
 
 .cnfg-name{
-    font-size: 20px;
+    font-size: 1.7rem;
 }
 
 .config-minute{
