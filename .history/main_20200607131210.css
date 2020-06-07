@@ -29,12 +29,15 @@ button{
     outline: inherit;
 }
 
-button > * {
-    pointer-events: none;
-  }
-
 i{
     color: var(--icon-color);
+    object-fit: cover;
+
+
+
+
+Type a message
+
     width: 100%;
 }
 

@@ -29,12 +29,9 @@ button{
     outline: inherit;
 }
 
-button > * {
-    pointer-events: none;
-  }
-
 i{
     color: var(--icon-color);
+    height: inherit;
     width: 100%;
 }
 

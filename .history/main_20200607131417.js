@@ -21,6 +21,7 @@ document.getElementById('btn-stop').addEventListener('click', pressStop);
 document.getElementById('btn-reset').addEventListener('click', resetButton);
 
 function pressArrow(e){
+  //const buttonId = e.target.parentNode.id;
   const buttonId = e.target.id;
   changeConfigMinutes(buttonId);
   alignConfigWithDisplay(buttonId);

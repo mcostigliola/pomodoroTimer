@@ -35,6 +35,7 @@ button > * {
 
 i{
     color: var(--icon-color);
+    object-fit: cover;
     width: 100%;
 }
 

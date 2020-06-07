@@ -4,7 +4,7 @@
     --icon-color: #d15c84;
 }
 
- *{
+*{
     border: 1px solid black;
     box-sizing: border-box;
     margin:0;
@@ -26,12 +26,7 @@ button{
     background: none;
     border: none;
     cursor: pointer;
-    outline: inherit;
 }
-
-button > * {
-    pointer-events: none;
-  }
 
 i{
     color: var(--icon-color);
