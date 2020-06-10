@@ -5,7 +5,7 @@
 }
 
  *{
-    border: 1px solid black;
+    
     box-sizing: border-box;
     margin:0;
     padding:0;
@@ -41,6 +41,7 @@ i{
 #main-container{
     background-color: var(--main-color);
     box-shadow:5px 5px 10px 5px var(--icon-color);
+    border: 1px solid black;
     display: flex;
     flex-flow: column;
     height: 400px;
@@ -50,8 +51,10 @@ i{
 }
 
 #session-container{
+    border-top: 1px solid black;
     display: flex;
     height: 30%;
+    padding: 1rem;
 }
 
 #status{
@@ -67,9 +70,11 @@ i{
 }
 
 #timer-container{
+    border-top: 1px solid black;
     display:flex;
     flex-flow: column;
     justify-content: space-between  ;
+    padding: 1rem;
     text-align: center;
 }
 
