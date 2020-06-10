@@ -43,10 +43,10 @@ i{
     box-shadow:5px 5px 10px 5px var(--icon-color);
     display: flex;
     flex-flow: column;
-    height: 250px;
+    height: 400px;
     justify-content: space-between;
     margin: auto;
-    width: 250px;
+    width: 400px;
 }
 
 #session-container{
