@@ -5,7 +5,7 @@
 }
 
  *{
-    
+
     box-sizing: border-box;
     margin:0;
     padding:0;
@@ -44,10 +44,10 @@ i{
     border: 1px solid black;
     display: flex;
     flex-flow: column;
-    height: 400px;
+    height: 550px;
     justify-content: space-between;
     margin: auto;
-    width: 400px;
+    width: 600px;
 }
 
 #session-container{
@@ -74,7 +74,7 @@ i{
     display:flex;
     flex-flow: column;
     justify-content: space-between  ;
-    padding: 1rem;
+    padding: 1rem 3rem 2rem 3rem;
     text-align: center;
 }
 
@@ -98,7 +98,7 @@ i{
 
 .btn-container{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .btn-container button{

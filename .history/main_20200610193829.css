@@ -1,5 +1,11 @@
-*{
-    border: 1px solid black;
+:root{
+    --bg-color: #798897;
+    --main-color: #f3eed9;
+    --icon-color: #d15c84;
+}
+
+ *{
+
     box-sizing: border-box;
     margin:0;
     padding:0;
@@ -7,6 +13,7 @@
 
 html{
     height: 100%;
+    background-color: var(--bg-color);
 }
 
 body{
@@ -16,21 +23,38 @@ body{
 }
 
 button{
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: inherit;
+}
 
+button > * {
+    pointer-events: none;
+  }
+
+i{
+    color: var(--icon-color);
+    width: 100%;
 }
 
 #main-container{
+    background-color: var(--main-color);
+    box-shadow:5px 5px 10px 5px var(--icon-color);
+    border: 1px solid black;
     display: flex;
     flex-flow: column;
-    height: 50vh;
+    height: 400px;
     justify-content: space-between;
     margin: auto;
-    width: 40%;
+    width: 400px;
 }
 
 #session-container{
+    border-top: 1px solid black;
     display: flex;
     height: 30%;
+    padding: 1rem;
 }
 
 #status{
@@ -45,9 +69,12 @@ button{
     height: 75%;
 }
 
-#timer-container p{
+#timer-container{
+    border-top: 1px solid black;
     display:flex;
     flex-flow: column;
+    justify-content: space-between  ;
+    padding: 1rem 1rem 2rem 1rem;
     text-align: center;
 }
 
@@ -59,8 +86,9 @@ button{
 }
 
 #title-watch p{
+    color: var(--icon-color);
     flex-grow: 1;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: bold;
 }
 
@@ -74,7 +102,8 @@ button{
 }
 
 .btn-container button{
-    width: 20%;
+    height: 25px;
+    width: 35px;
 }
 
 .cnfg-controller{
@@ -84,11 +113,14 @@ button{
 }
 
 .cnfg-name{
-    font-size: 1.7rem;
+    font-size: 20px;
 }
 
 .config-minute{
     font-size: 1.5rem;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
 }
 
 
