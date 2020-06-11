@@ -42,8 +42,10 @@ i{
 
 #main-container{
     background-color: var(--main-color);
-    box-shadow:5px 5px 10px 5px var(--icon-color);
+    box-shadow: 21px 21px 5px 1px hsl(210, 33%, 21%);
+    /* box-shadow:5px 5px 10px 5px var(--icon-color); */
     border: 1px solid black;
+    border-radius: 25px;
     display: flex;
     flex-flow: column;
     height: 550px;
