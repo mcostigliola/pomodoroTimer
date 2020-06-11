@@ -35,15 +35,14 @@ button > * {
     pointer-events: none;
   }
 
-  footer{
-    align-self: center;
-    margin-bottom: 50px;
-}
-
 i{
     color: var(--icon-color);
     width: 100%;
 }
+
+#footer{
+    margin-bottom: 50px;
+  }
 
 #main-container{
     background-color: var(--main-color);

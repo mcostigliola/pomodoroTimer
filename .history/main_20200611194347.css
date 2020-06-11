@@ -35,15 +35,14 @@ button > * {
     pointer-events: none;
   }
 
-  footer{
-    align-self: center;
-    margin-bottom: 50px;
-}
-
 i{
     color: var(--icon-color);
     width: 100%;
 }
+
+#footer{
+    margin-bottom: 50px;
+  }
 
 #main-container{
     background-color: var(--main-color);
@@ -64,6 +63,10 @@ i{
     height: 30%;
     padding: 2% 9% 2% 8%;
 }
+
+#signature{
+    font-size: 22px;
+  }
 
 #status{
     font-size: 2rem;
@@ -109,6 +112,8 @@ i{
     justify-content: space-between;
 }
 
+
+
 .cnfg-controller{
     display: flex;
     flex-grow: 1;
@@ -126,9 +131,6 @@ i{
     justify-content: center;
 }
 
-.signature{
-    font-size: 22px;
-  }
 
 .timer-configurator{
     display: flex;
