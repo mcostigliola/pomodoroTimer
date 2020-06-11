@@ -141,7 +141,7 @@ function resetButton(){
 }
 
 function switchStatus(){
-  alarmSound.play();
+  alarmSound.play(),
   clearInterval(intervalId);
   isOnBreak = !isOnBreak;
   if(isOnBreak){
