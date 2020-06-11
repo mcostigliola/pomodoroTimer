@@ -2,9 +2,14 @@ NEXT SESSION:
 pseudo code di tutto
 
 TODO FUTURI:
--inserire timer nel titolo della page per renderlo visibile dal tab
 -aggiungere suono a fine timer
--aggiungere lonk break ogni 4 pomodoro
+-aggiungere long break ogni 4 pomodoro
+
+COLORI
+#f95e46
+#bb8377
+#fff6f2
+#ede9d0
 
 PSEUDOCODICE
 setto variabile isPaused = true
