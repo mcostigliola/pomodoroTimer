@@ -62,6 +62,11 @@ function changeConfigMinutes(buttonId){
 function updateDisplay(){
   updateTimerText();
   udpateConfigText();
+  updateTitleText();
+}
+
+function updateTitleText(){
+  document.title = `Pomodoro Timer - ` + document.getElementById('timer').innerText;
 }
 
 function updateTimerText(){
